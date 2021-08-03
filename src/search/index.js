@@ -9,7 +9,7 @@ module.exports = async function (context, req) {
     await page.type('body > div.L3eUgb > div.o3j99.ikrT4e.om7nvf > form > div:nth-child(1) > div.A8SBwf > div.RNNXgb > div > div.a4bIc > input','time now in Cape Town');
     await page.click('body > div.L3eUgb > div.o3j99.ikrT4e.om7nvf > form > div:nth-child(1) > div.A8SBwf > div.FPdoLc.lJ9FBc > center > input.gNO89b')
     await page.waitForNavigation();
-    var screenshotBuffer = await page.screenshot({ path: 'npmjs.png' });
+    const screenshotBuffer = await page.screenshot();
     await browser.close();
 
     context.res = {

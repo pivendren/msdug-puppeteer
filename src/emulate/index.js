@@ -7,10 +7,7 @@ module.exports = async function (context, req) {
     const page = await browser.newPage();
     await page.emulate(iPhone)
     await page.goto(url)
-    var screenshotBuffer = await page.screenshot({
-      path: 'full.png',
-      fullPage: true
-    })
+    const screenshotBuffer = await page.screenshot({ fullPage: true })
     await browser.close();
 
     context.res = {

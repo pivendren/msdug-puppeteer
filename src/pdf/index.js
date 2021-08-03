@@ -5,7 +5,7 @@ module.exports = async function (context, req) {
     const browser = await puppeteer.launch({ args: ['--no-sandbox'] });
     const page = await browser.newPage();
     await page.goto(url);
-    const pdfBuffer = await page.pdf({ path: 'doc.pdf', format: 'A4' });
+    const pdfBuffer = await page.pdf({ format: 'A4' });
     await browser.close();
 
     context.res = {
